@@ -157,9 +157,9 @@ img {
 
 .hamburger-menu-list {
   margin-top: 32px;
+  gap: 40px;
 }
 
-.hamburger-menu-item,
 .hamburger-address-item {
   margin-bottom: 40px;
 }
@@ -208,6 +208,7 @@ img {
 }
 
 .hidden-menu-container {
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -221,14 +222,13 @@ img {
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 20vh;
-  background-color: #31d0aa;
+  justify-content: flex-end;
 }
 
-.hamburger-social-menu {
+.mobile-social-menu-container > .hamburger-social-menu {
   display: flex;
-  gap: 56px;
-  margin-bottom: 24px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .hamburger-social-item {
@@ -360,6 +360,13 @@ img {
   display: none;
 }
 
+/* <-- Section 4 | Team Profile | Social Media --> */
+
+.team-section {
+  background-color: var(--cloud);
+  padding: 96px 0;
+}
+
 .section-header-title {
   font-size: 36px;
   line-height: 1.11;
@@ -370,17 +377,11 @@ img {
   margin-bottom: 72px;
 }
 
-/* <-- Section 4 | Team Profile | Social Media --> */
-
-.team-section {
-  background-color: var(--cloud);
-  padding: 96px 0;
-}
-
 .team-list.list {
   display: flex;
   gap: 72px;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
 }
 
@@ -393,18 +394,19 @@ img {
 }
 
 .team-member {
-  padding: 32px 0;
+  padding: 32px;
 }
 
 .feature-title {
-  padding: 32px 0;
+  text-align: center;
+  margin-bottom: 8px;
 }
 
 .body-text {
   text-align: center;
 }
 
-.social-media-icons {
+.team-socmed-list {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -429,12 +431,12 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.socmed-icon-link:hover,
-.socmed-icon-link:focus {
+.socmed-icon-svg-link:hover,
+.socmed-icon-svg-link:focus {
   background-color: var(--ocean);
 }
 
-.socmed-icon {
+.socmed-icon-svg {
   fill: var(--cloud);
 }
 
@@ -473,8 +475,8 @@ img {
   fill: currentColor;
 }
 
-.customer-icon-svg-link:hover,
-.customer-icon-svg-link:focus {
+.customer-icon-link-link:hover,
+.customer-icon-link-link:focus {
   border-color: var(--ocean);
   color: var(--ocean);
 }
@@ -523,14 +525,7 @@ img {
   margin-bottom: 0px;
 }
 
-.footer-wrapper .logo {
-  display: flex;
-  margin-bottom: 18px;
-  justify-content: center;
-  width: 100%;
-}
-
-.footer-menu-title {
+.footer-socmed-title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -632,7 +627,8 @@ img {
 }
 
 .subscribe-submit-svg {
-  margin-bottom: 16px;
+  margin-left: 16px;
+  fill: var(--white);
 }
 
 /* <-- Hero | Modal Window -->  */
@@ -885,10 +881,6 @@ img {
   border: 1px solid transparent;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-img {
-  display: block;
 }
 
 .product.list {
