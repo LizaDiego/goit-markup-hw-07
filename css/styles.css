@@ -19,10 +19,6 @@
   --dairy: #fcfcfc;
 }
 
-html {
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--slate);
@@ -75,7 +71,7 @@ img {
 /* <-- Header | Navigation | Mobile View --> */
 
 .container {
-  max-width: 428px;
+  min-width: 320px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -258,13 +254,13 @@ img {
   fill: var(--cloud);
 }
 
-/* <-- Section 1 | Hero --> */
+/* <-- Section 1 | Hero | Mobile View --> */
 
 .hero-section {
   background-color: var(--navyblue);
   padding: 112px 0;
   background-image: url(/images/people-office.jpg),
-    url(/assets/hero-people-office-1x.jpg),
+    url(/assets/hero-people-office-1x.jpg), url(/assets/hero-bgm-2x.jpg),
     linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
@@ -308,7 +304,7 @@ img {
   background-color: var(--ocean);
 }
 
-/* <-- Section 2 | Features --> */
+/* <-- Section 2 | Features | Mobile View --> */
 
 .visually-hidden {
   position: absolute;
@@ -356,13 +352,13 @@ img {
   font-weight: 400;
 }
 
-/* <-- Section 3 | Services --> */
+/* <-- Section 3 | Services | Mobile View --> */
 
 .what-we-do-section {
   display: none;
 }
 
-/* <-- Section 4 | Team Profile | Social Media --> */
+/* <-- Section 4 | Team Profile | Social Media | Mobile View --> */
 
 .team-section {
   background-color: var(--cloud);
@@ -442,7 +438,7 @@ img {
   fill: var(--cloud);
 }
 
-/* <-- Section 5 | Customers --> */
+/* <-- Section 5 | Customers | Mobile View --> */
 
 .customer-gallery-section {
   padding: 96px 0;
@@ -483,7 +479,7 @@ img {
   color: var(--ocean);
 }
 
-/* <-- Footer | Social Media | Subscribe Form --> */
+/* <-- Footer | Social Media | Subscribe Form | Mobile View --> */
 
 .footer-section {
   background-color: var(--navyblue);
@@ -512,8 +508,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  gap: 0 24px;
   margin-bottom: 72px;
 }
 
@@ -541,6 +536,7 @@ img {
 .footer-socmed-menu {
   display: flex;
   gap: 16px;
+  margin-bottom: 72px;
 }
 
 .footer-socmed-icon {
@@ -568,7 +564,7 @@ img {
   fill: var(--cloud);
 }
 
-.subscribe-form-title {
+.subscribe-label-text {
   margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
@@ -581,8 +577,8 @@ img {
 }
 
 .subscribe-form {
-  gap: 16px;
   width: 100%;
+  gap: 16px;
   display: flex;
   flex-direction: column;
 }
@@ -633,7 +629,7 @@ img {
   fill: var(--white);
 }
 
-/* <-- Hero | Modal Window -->  */
+/* <-- Hero | Modal Window | All Screens -->  */
 
 .backdrop {
   position: fixed;
@@ -851,7 +847,7 @@ label {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* <-- Hero | Modal Form Send Button --> */
+/* <-- Hero | Modal Form Send Button | All Screens --> */
 
 a {
   text-decoration: none;
@@ -884,7 +880,7 @@ a {
 
 /* <-- Tablet View --> */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   .menu-toggle {
     display: none;
   }
@@ -896,6 +892,7 @@ a {
     max-width: 768px;
     height: 100%;
     margin: 0 auto;
+    padding: 0 15px;
   }
 
   /* <-- Header | Navigation | Tablet View--> */
@@ -968,7 +965,7 @@ a {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -28px;
+    bottom: -26px;
     height: 4px;
     background-color: var(--ocean);
     border-radius: 2px;
@@ -986,6 +983,7 @@ a {
     background-color: var(--navyblue);
     padding: 112px 0;
     background-image: url(/images/people-office.jpg),
+      url(/assets/hero-bgt-1x.jpg), url(/assets/hero-bgt-2x.jpg),
       linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
     background-repeat: no-repeat, no-repeat;
     background-position: center, center;
@@ -1111,11 +1109,16 @@ a {
     margin-bottom: 16px;
   }
 
-  .footer-section.footer-container {
+  .footer-section .logo {
+    margin: 0 0 16px;
+    padding: 0;
+  }
+
+  .footer-section .container {
     display: flex;
-    gap: 0 24px;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 0 24px;
   }
 
   .footer-section .footer-wrapper {
@@ -1126,14 +1129,77 @@ a {
     max-width: 264px;
   }
 
-  .footer-section .logo {
-    margin: 0 0 16px;
-    padding: 0;
-  }
-
   .footer-socmed-title {
     justify-content: left;
     line-height: 1;
+  }
+}
+
+/* <-- Desktop View -- > */
+
+@media screen and (min-width: 1157px) {
+  .container {
+    max-width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  /* <-- Header | Navigation | Desktop View */
+
+  .header-nav,
+  .address-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-active::after {
+    content: '';
+    background-color: var(--ocean);
+    position: absolute;
+    left: 0;
+    bottom: -26px;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  li > .link:hover,
+  li > .link:focus {
+    color: var(--ocean);
+  }
+
+  .address > .list {
+    display: flex;
+    gap: 40px;
+  }
+
+  .list.address-menu {
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+
+  /* <-- Section 1 | Hero | Desktop View --> */
+  .hero-section {
+    padding: 188px 0;
+    background-size: auto;
+    height: 600px;
+  }
+
+  /* <-- Section 2 | Features | Desktop View --> */
+
+  .feature-section {
+    padding: 120px 0;
+  }
+  
+  .feature-info-list .header-title {
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .feature-info-list .body-text {
+    font-size: 16px;
+    font-weight: 400;
   }
 }
 
