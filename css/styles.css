@@ -5,6 +5,7 @@
 }
 
 /* <-- Global Settings --> */
+
 :root {
   --iris: #4d5ae5;
   --ocean: #404bbf;
@@ -49,6 +50,7 @@ img {
 }
 
 /* <-- Header | Site Logo --> */
+
 .logo {
   color: var(--iris);
   font-family: 'Raleway', sans-serif;
@@ -851,6 +853,7 @@ label {
 }
 
 /* <-- Hero | Modal Form Send Button --> */
+
 a {
   text-decoration: none;
 }
