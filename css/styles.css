@@ -515,12 +515,6 @@ img {
   margin-bottom: 72px;
 }
 
-.footer-socmed-wrapper {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .footer-wrapper:last-child {
   margin-bottom: 0px;
 }
@@ -918,11 +912,6 @@ a {
     justify-content: space-between;
   }
 
-  .header-nav {
-    display: flex;
-    width: 100%;
-  }
-
   .header-menu,
   .address-menu {
     display: flex;
@@ -937,6 +926,7 @@ a {
 
   .address-menu {
     display: flex;
+    flex-direction: column;
     justify-content: end;
     width: 100%;
   }
@@ -1140,19 +1130,28 @@ a {
     max-width: 264px;
   }
 
+  .footer-text {
+    margin-right: 24px;
+  }
+
   .footer-socmed-title {
     justify-content: left;
     line-height: 1;
   }
 
-  .input-subscribe-form {
+  .subscribe-form {
     display: inline-flex;
-    justify-content: left;
     flex-direction: row;
   }
 
-  .subscribe-form {
+  .input-subscribe-form {
+    display: inline-flex;
     flex-direction: row;
+    width: 264px;
+  }
+
+  .subscribe-label-text {
+    justify-content: left;
   }
 }
 
@@ -1166,12 +1165,6 @@ a {
   }
 
   /* <-- Header | Navigation | Desktop View */
-
-  .header-nav,
-  .address-nav {
-    display: flex;
-    align-items: center;
-  }
 
   .menu-active::after {
     content: '';
@@ -1190,30 +1183,18 @@ a {
     color: var(--ocean);
   }
 
-  .address-nav {
-    font-style: normal;
-  }
-
-  .address > .list {
+  .address-menu {
     display: flex;
+    flex-direction: row;
     gap: 40px;
   }
 
-  .address-menu.list {
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
-
-  .address-item > .address-info {
+  .address-info {
     color: var(--slate);
     font-size: 16px;
+    font-style: normal;
     line-height: 1.5;
     letter-spacing: 0.02em;
-  }
-
-  .address-info:hover,
-  .address-info:focus {
-    color: var(--ocean);
   }
 
   /* <-- Section 1 | Hero | Desktop View --> */
@@ -1241,9 +1222,122 @@ a {
     font-size: 16px;
     font-weight: 400;
   }
+
+  .feature-info-list .list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .feature-card {
+    flex-basis: calc((100% - 72px) / 4);
+  }
+
+  .feature-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: var(--cloud);
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+
+  .feature-card .header-title {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: var(--navyblue);
+  }
+
+  .feature-card .body-text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: var(--slate);
+  }
+
+  /* <-- Section 3 | What We Do | Desktop View --> */
+
+  .what-we-do-section {
+    padding: 0 0 120px;
+    display: block;
+  }
+
+  .section-header-title {
+    text-align: center;
+    color: var(--navyblue);
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    margin-bottom: 72px;
+  }
+
+  .service.list {
+    display: flex;
+    gap: 24px;
+  }
+
+  .service-photo-list {
+    flex-basis: calc((100% --48px) / 3);
+  }
+
+  /* <-- Section 4 | Our Team | Desktop View --> */
+
+  .team-section {
+    background-color: var(--cloud);
+    padding: 120px 0;
+  }
+
+  .team-list.list {
+    display: flex;
+    gap: 24px;
+  }
+
+  .team-member-profile {
+    background-color: var(--white);
+    flex-basis: calc((100% - 72px) / 4);
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  }
+
+  .team-member {
+    padding: 32px 0;
+  }
+
+  .feature-title {
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .body-text {
+    text-align: center;
+  }
+
+  /* <-- Section 5 | Customers | Desktop View --> */
+
+  .customer-gallery-section {
+    padding: 120px 0;
+  }
+
+  .customer-list {
+    display: flex;
+    gap: 24px;
+  }
+
+  .customer-gallery-list {
+    width: calc((100% - 120px) / 6);
+    height: 88px;
+  }
 }
 
-/* <----- Portfolio | Desktop View -----> */
+/* <----- Portfolio | Not Responsive | Desktop View -----> */
 
 .product-services {
   padding: 96px 0 120px 0;
