@@ -259,9 +259,11 @@ img {
 .hero-section {
   background-color: var(--navyblue);
   padding: 112px 0;
-  background-image: url(/images/people-office.jpg),
-    url(/assets/hero-people-office-1x.jpg), url(/assets/hero-bgm-2x.jpg),
-    linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
   background-size: cover, cover;
@@ -989,9 +991,11 @@ a {
   .hero-section {
     background-color: var(--navyblue);
     padding: 112px 0;
-    background-image: url(/images/people-office.jpg),
-      url(/assets/hero-bgt-1x.jpg), url(/assets/hero-bgt-2x.jpg),
-      linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office.jpg);
     background-repeat: no-repeat, no-repeat;
     background-position: center, center;
     background-size: cover, cover;
@@ -1144,6 +1148,10 @@ a {
   .input-subscribe-form {
     display: inline-flex;
     justify-content: left;
+    flex-direction: row;
+  }
+
+  .subscribe-form {
     flex-direction: row;
   }
 }
